@@ -1,0 +1,23 @@
+
+> hrms-lite-frontend@1.0.0 build
+> vite build
+
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32m✓[39m 356 modules transformed.
+[31m✗[39m Build failed in 2.35s
+[31merror during build:
+[31m[vite:css] [postcss] C:/Users/mb756/Downloads/ethara-assessment-main/ethara-assessment-main/frontend/src/index.css:47:3: 'colors.aura.light.DEFAULT' does not exist in your theme config. 'colors' has the following keys: 'inherit', 'current', 'transparent', 'black', 'white', 'slate', 'gray', 'zinc', 'neutral', 'stone', 'red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose', 'aura-dark', 'aura-dark-surface', 'aura-dark-border', 'aura-dark-text', 'aura-dark-muted', 'aura-light', 'aura-light-surface', 'aura-light-border', 'aura-light-text', 'aura-light-muted', 'accent', 'success', 'warning', 'danger'[31m
+file: [36mC:/Users/mb756/Downloads/ethara-assessment-main/ethara-assessment-main/frontend/src/index.css:47:2[31m
+CssSyntaxError: C:/Users/mb756/Downloads/ethara-assessment-main/ethara-assessment-main/frontend/src/index.css:47:3: 'colors.aura.light.DEFAULT' does not exist in your theme config. 'colors' has the following keys: 'inherit', 'current', 'transparent', 'black', 'white', 'slate', 'gray', 'zinc', 'neutral', 'stone', 'red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose', 'aura-dark', 'aura-dark-surface', 'aura-dark-border', 'aura-dark-text', 'aura-dark-muted', 'aura-light', 'aura-light-surface', 'aura-light-border', 'aura-light-text', 'aura-light-muted', 'accent', 'success', 'warning', 'danger'
+    at C:/Users/mb756/Downloads/ethara-assessment-main/ethara-assessment-main/frontend/src/index.css:47:3
+    at Input.error (C:\Users\mb756\Downloads\ethara-assessment-main\ethara-assessment-main\frontend\node_modules\postcss\lib\input.js:135:16)
+    at Declaration.error (C:\Users\mb756\Downloads\ethara-assessment-main\ethara-assessment-main\frontend\node_modules\postcss\lib\node.js:146:32)
+    at Object.theme (C:\Users\mb756\Downloads\ethara-assessment-main\ethara-assessment-main\frontend\node_modules\tailwindcss\lib\lib\evaluateTailwindFunctions.js:207:28)
+    at resolveVNode (C:\Users\mb756\Downloads\ethara-assessment-main\ethara-assessment-main\frontend\node_modules\tailwindcss\lib\lib\evaluateTailwindFunctions.js:133:45)
+    at C:\Users\mb756\Downloads\ethara-assessment-main\ethara-assessment-main\frontend\node_modules\tailwindcss\lib\lib\evaluateTailwindFunctions.js:141:9
+    at walk (C:\Users\mb756\Downloads\ethara-assessment-main\ethara-assessment-main\frontend\node_modules\tailwindcss\lib\value-parser\walk.js:7:22)
+    at ValueParser.walk (C:\Users\mb756\Downloads\ethara-assessment-main\ethara-assessment-main\frontend\node_modules\tailwindcss\lib\value-parser\index.js:16:5)
+    at resolveFunctions (C:\Users\mb756\Downloads\ethara-assessment-main\ethara-assessment-main\frontend\node_modules\tailwindcss\lib\lib\evaluateTailwindFunctions.js:140:39)
+    at C:\Users\mb756\Downloads\ethara-assessment-main\ethara-assessment-main\frontend\node_modules\tailwindcss\lib\lib\evaluateTailwindFunctions.js:235:30
+    at C:\Users\mb756\Downloads\ethara-assessment-main\ethara-assessment-main\frontend\node_modules\postcss\lib\container.js:315:18[39m

@@ -1,0 +1,47 @@
+INFO:     Started server process [24332]
+INFO:     Waiting for application startup.
+ERROR:    Traceback (most recent call last):
+  File "C:\Users\mb756\Downloads\ethara-assessment-main\ethara-assessment-main\backend\venv\Lib\site-packages\starlette\routing.py", line 694, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+               ~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Python313\Lib\contextlib.py", line 214, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mb756\Downloads\ethara-assessment-main\ethara-assessment-main\backend\venv\Lib\site-packages\fastapi\routing.py", line 203, in merged_lifespan
+    async with original_context(app) as maybe_original_state:
+               ~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Python313\Lib\contextlib.py", line 214, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mb756\Downloads\ethara-assessment-main\ethara-assessment-main\backend\venv\Lib\site-packages\fastapi\routing.py", line 203, in merged_lifespan
+    async with original_context(app) as maybe_original_state:
+               ~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Python313\Lib\contextlib.py", line 214, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mb756\Downloads\ethara-assessment-main\ethara-assessment-main\backend\app\main.py", line 22, in lifespan
+    await connect_to_mongo()
+  File "C:\Users\mb756\Downloads\ethara-assessment-main\ethara-assessment-main\backend\app\database.py", line 27, in connect_to_mongo
+    client = AsyncIOMotorClient(
+        MONGODB_URI,
+    ...<3 lines>...
+        connectTimeoutMS=30000,
+    )
+  File "C:\Users\mb756\Downloads\ethara-assessment-main\ethara-assessment-main\backend\venv\Lib\site-packages\motor\core.py", line 171, in __init__
+    delegate = self.__delegate_class__(*args, **kwargs)
+  File "C:\Users\mb756\Downloads\ethara-assessment-main\ethara-assessment-main\backend\venv\Lib\site-packages\pymongo\synchronous\mongo_client.py", line 852, in __init__
+    self._options = ClientOptions(username, password, dbase, opts, _IS_SYNC)
+                    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mb756\Downloads\ethara-assessment-main\ethara-assessment-main\backend\venv\Lib\site-packages\pymongo\client_options.py", line 222, in __init__
+    self.__pool_options = _parse_pool_options(username, password, database, options, is_sync)
+                          ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mb756\Downloads\ethara-assessment-main\ethara-assessment-main\backend\venv\Lib\site-packages\pymongo\client_options.py", line 173, in _parse_pool_options
+    ssl_context, tls_allow_invalid_hostnames = _parse_ssl_options(options, is_sync)
+                                               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mb756\Downloads\ethara-assessment-main\ethara-assessment-main\backend\venv\Lib\site-packages\pymongo\client_options.py", line 128, in _parse_ssl_options
+    raise ConfigurationError(
+    ...<3 lines>...
+    )
+pymongo.errors.ConfigurationError: TLS has not been enabled but the following tls parameters have been set: tlsallowinvalidcertificates. Please set `tls=True` or remove.
+
+ERROR:    Application startup failed. Exiting.
