@@ -4,7 +4,7 @@ Handles MongoDB connection using Motor async driver
 """
 
 import os
-import ssl
+import certifi
 from motor.motor_asyncio import AsyncIOMotorClient
 from dotenv import load_dotenv
 
@@ -20,19 +20,17 @@ async def connect_to_mongo():
     """Initialize MongoDB connection and create indexes"""
     global client, db
 
-    # For cloud deployments like Render, allow invalid certificates
-    # only if NOT running locally
     is_local = "localhost" in MONGODB_URI or "127.0.0.1" in MONGODB_URI
-    
+
     mongo_options = {
         "serverSelectionTimeoutMS": 30000,
         "connectTimeoutMS": 30000,
     }
-    
+
+    # Use certifi CA bundle for cloud MongoDB Atlas connections
     if not is_local:
-        mongo_options["tls"] = True
-        mongo_options["tlsAllowInvalidCertificates"] = True
-    
+        mongo_options["tlsCAFile"] = certifi.where()
+
     client = AsyncIOMotorClient(
         MONGODB_URI,
         **mongo_options
