@@ -129,7 +129,7 @@ cp .env.example .env
 npm run dev
 ```
 
-Visit `https://ethara-assessment.vercel.app/dashboard` to access the application.
+Visit `[https://ethara-assessment-main.vercel.app/dashboard](https://ethara-assessment-main.vercel.app/dashboard)` to access the application.
 
 ## 📡 API Endpoints
 
